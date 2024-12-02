@@ -1,5 +1,5 @@
 function ListGroup() {
-    const items = [
+    let items = [
         'Brazil',
         'EUA',
         'México',
@@ -7,9 +7,12 @@ function ListGroup() {
         'Argentina'
     ]
 
+    // items = []
+
     return (
     <>
         <h1>Olá</h1>
+        {items.length === 0 && <p>Not found</p>}
         <ul className="list-group">
             {items.map((item) => (
                 <li key={item}>{item}</li>
@@ -19,4 +22,4 @@ function ListGroup() {
     ); 
 }
 
-export default ListGroup
+export default ListGroup 
